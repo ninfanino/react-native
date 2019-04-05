@@ -1,29 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import AppButton from './application/components/AppButton';
+import { Text, View } from 'react-native';
+import PreLoader from './application/components/PreLoader';
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <AppButton
-          bgColor="rgba(252, 197, 0, 1)"
-          title="Login"
-          action={() => console.log(1)}
-          iconName="sign-in"
-          iconSize={32}
-          iconColor="#fff"
-        />
-      </View>
+      <PreLoader/>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
